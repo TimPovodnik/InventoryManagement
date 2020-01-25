@@ -30,6 +30,7 @@ namespace InventoryApp
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             i = Convert.ToInt32(dt.Rows.Count.ToString());
+
             if (i == 0)
             {
                 MessageBox.Show("This username and password does not match");
@@ -37,8 +38,8 @@ namespace InventoryApp
             else
             {
                 this.Hide();
-                MDIParent1 mdi = new MDIParent1();
-                mdi.Show();
+                MDIParent1 mdi = new MDIParent1(); // v mdi shrani index stran (MDIParent1)
+                mdi.Show(); // prikaže index stran (MDIParent1)
             }
         }
 
@@ -57,9 +58,9 @@ namespace InventoryApp
 
         }
 
-        
-        
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
-        
+        }
     }
 }

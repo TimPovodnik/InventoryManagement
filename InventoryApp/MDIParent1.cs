@@ -68,12 +68,12 @@ namespace InventoryApp
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+           // toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+          //  statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +102,44 @@ namespace InventoryApp
             {
                 childForm.Close();
             }
+        }
+
+        private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            add_new_user anu = new add_new_user(); //shranim v spremenljivko (add_new_user stran)
+            anu.Show(); // odpre stran "add_new_user"
+        }
+
+        private void addNewUnitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Unit un = new Unit(); //shranim v spremenljivko (Unit stran)
+            un.Show(); // odpre stran "Unit"
+        }
+
+        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addNewProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            add_product_name apn = new add_product_name(); // iz index strani poveze na okno "Add New Product"
+            
+            apn.Show(); // prikaze okno
+        }
+
+        private void addNewSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            supplier_info si = new supplier_info(); // iz index strani poveze na okno "Supplier Information"
+
+            si.Show(); // prikaze okno
+        }
+
+        private void purchaseFromSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            purchase_product pfs = new purchase_product(); // iz index strani poveze na okno "Purchase Product"            
+
+            pfs.Show(); // prikaze okno
         }
     }
 }
