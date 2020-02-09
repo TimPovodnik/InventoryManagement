@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             this.gradientPanel3 = new InventoryApp.GradientPanel();
+            this.labelX = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.buttonDeleteSelectedUser = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,10 +47,6 @@
             this.txtEnterProductName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.gradientPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -55,6 +56,7 @@
             // 
             this.gradientPanel3.ColorBottom = System.Drawing.Color.Navy;
             this.gradientPanel3.ColorTop = System.Drawing.Color.DarkViolet;
+            this.gradientPanel3.Controls.Add(this.labelX);
             this.gradientPanel3.Controls.Add(this.label5);
             this.gradientPanel3.Controls.Add(this.label14);
             this.gradientPanel3.Controls.Add(this.buttonDeleteSelectedUser);
@@ -71,6 +73,43 @@
             this.gradientPanel3.Size = new System.Drawing.Size(800, 542);
             this.gradientPanel3.TabIndex = 0;
             // 
+            // labelX
+            // 
+            this.labelX.AutoSize = true;
+            this.labelX.BackColor = System.Drawing.Color.Transparent;
+            this.labelX.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX.ForeColor = System.Drawing.Color.White;
+            this.labelX.Location = new System.Drawing.Point(704, 7);
+            this.labelX.Name = "labelX";
+            this.labelX.Size = new System.Drawing.Size(96, 22);
+            this.labelX.TabIndex = 63;
+            this.labelX.Text = "<--- Nazaj";
+            this.labelX.Click += new System.EventHandler(this.labelX_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(525, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 16);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(335, 45);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(14, 16);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "*";
+            // 
             // buttonDeleteSelectedUser
             // 
             this.buttonDeleteSelectedUser.BackColor = System.Drawing.Color.Transparent;
@@ -78,11 +117,11 @@
             this.buttonDeleteSelectedUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteSelectedUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDeleteSelectedUser.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteSelectedUser.Location = new System.Drawing.Point(466, 427);
+            this.buttonDeleteSelectedUser.Location = new System.Drawing.Point(459, 427);
             this.buttonDeleteSelectedUser.Name = "buttonDeleteSelectedUser";
-            this.buttonDeleteSelectedUser.Size = new System.Drawing.Size(136, 28);
+            this.buttonDeleteSelectedUser.Size = new System.Drawing.Size(151, 28);
             this.buttonDeleteSelectedUser.TabIndex = 22;
-            this.buttonDeleteSelectedUser.Text = "Delete Selected User";
+            this.buttonDeleteSelectedUser.Text = "Izbriši Izbran Izdelek";
             this.buttonDeleteSelectedUser.UseVisualStyleBackColor = false;
             this.buttonDeleteSelectedUser.Click += new System.EventHandler(this.buttonDeleteSelectedUser_Click);
             // 
@@ -98,9 +137,33 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(48, 197);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(301, 199);
+            this.panel1.Size = new System.Drawing.Size(310, 199);
             this.panel1.TabIndex = 21;
             this.panel1.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(184, 74);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(14, 16);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(287, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 16);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "*";
             // 
             // txtProductName
             // 
@@ -116,11 +179,11 @@
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(146, 112);
+            this.buttonUpdate.Location = new System.Drawing.Point(104, 112);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(136, 28);
+            this.buttonUpdate.Size = new System.Drawing.Size(178, 28);
             this.buttonUpdate.TabIndex = 20;
-            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.Text = "Posodobi Izbran Izdelek";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
@@ -131,11 +194,11 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(8, 17);
+            this.label4.Location = new System.Drawing.Point(25, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 16);
+            this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Product Name";
+            this.label4.Text = "ime Izdelka";
             // 
             // comboBox2
             // 
@@ -151,11 +214,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 70);
+            this.label3.Location = new System.Drawing.Point(65, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 16);
+            this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Select Unit";
+            this.label3.Text = "Enota";
             // 
             // dataGridView1
             // 
@@ -179,7 +242,7 @@
             this.buttonAddNewProduct.Name = "buttonAddNewProduct";
             this.buttonAddNewProduct.Size = new System.Drawing.Size(136, 28);
             this.buttonAddNewProduct.TabIndex = 14;
-            this.buttonAddNewProduct.Text = "Add New Product";
+            this.buttonAddNewProduct.Text = "Dodaj Izdelek";
             this.buttonAddNewProduct.UseVisualStyleBackColor = false;
             this.buttonAddNewProduct.Click += new System.EventHandler(this.buttonAddNewProduct_Click);
             // 
@@ -204,11 +267,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(375, 42);
+            this.label2.Location = new System.Drawing.Point(406, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Select Unit";
+            this.label2.Text = "Enota";
             // 
             // label1
             // 
@@ -217,59 +280,11 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 42);
+            this.label1.Location = new System.Drawing.Point(71, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 16);
+            this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Enter Product Name";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(335, 45);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(14, 16);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "*";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(525, 45);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 16);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "*";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(287, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 16);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "*";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(184, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(14, 16);
-            this.label7.TabIndex = 41;
-            this.label7.Text = "*";
+            this.label1.Text = "Ime Izdelka";
             // 
             // add_product_name
             // 
@@ -277,6 +292,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 542);
             this.Controls.Add(this.gradientPanel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "add_product_name";
             this.Text = "Add New Product";
             this.Load += new System.EventHandler(this.add_product_name_Load);
@@ -309,5 +325,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelX;
     }
 }

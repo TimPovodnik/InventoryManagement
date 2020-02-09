@@ -13,54 +13,56 @@ namespace InventoryApp
 {
     public partial class login : Form
     {
+        
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tim\source\repos\InventoryApp1\InventoryApp\Database2.mdf;Integrated Security=True");
         public login()
         {
             InitializeComponent();
         }
-
+  
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             int i = 0;
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from registration where username = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
+            cmd.CommandText = "select * from registration where username = '" + txtUsername.Text + "' and password = '" + txtPsw.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             i = Convert.ToInt32(dt.Rows.Count.ToString());
 
-            if (i == 0)
+            if (i == 0) // če ne vrne ničesar (podatek ne obstaja)
             {
-                MessageBox.Show("This username and password does not match");
+                MessageBox.Show("This Username and Password does not match");
+                txtUsername.Text = ""; // resetira polje v prazno
+                txtPsw.Text = ""; // resetira polje v prazno
+                txtUsername.Focus(); // focus na Username
             }
             else
             {
                 this.Hide();
-                MDIParent1 mdi = new MDIParent1(); // v mdi shrani index stran (MDIParent1)
-                mdi.Show(); // prikaže index stran (MDIParent1)
+                home h = new home(); // v mdi shrani index stran (home)         
+                h.labelUser.Text = this.txtUsername.Text; // vzame text iz txtUsername v formu "login" in ga vpiše v labelUser v formu "home"
+                h.Show(); // prikaže index stran (Home) 
+
             }
         }
 
-        private void login_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
-                
+
             }
             con.Open();
         }
 
-        private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
+        private void labelX_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            this.Close();
+            Application.Exit();
         }
     }
 }

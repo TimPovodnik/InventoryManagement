@@ -191,6 +191,16 @@ namespace InventoryApp
             MessageBox.Show("Product was purhased successfully.");
         }
 
-        
+        private void labelX_Click(object sender, EventArgs e)
+        {
+            home h = new home();
+            h.Show();
+            this.Hide();
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

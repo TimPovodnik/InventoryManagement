@@ -59,11 +59,13 @@ namespace InventoryApp
 
         private void add_new_user_Load(object sender, EventArgs e)
         {
-            if (con.State == ConnectionState.Open)
+            // na začetku je povezava vedko zaprta ampak se vseeno preveri, če je odprta
+
+            if (con.State == ConnectionState.Open) // preveri ali je povezava vzpostavljena
             {
-                con.Close();
+                con.Close(); // zapre povezavo
             }
-            con.Open();
+            con.Open(); // odpre povezavo
             display(); // funkcija za prikaz podatkov v DataGridWiev
         }
 
@@ -108,6 +110,13 @@ namespace InventoryApp
             cmd.ExecuteNonQuery();
 
             display(); // funkcija za prikaz podatkov
+        }
+
+        private void labelX_Click(object sender, EventArgs e)
+        {
+            home h = new home();
+            h.Show();
+            this.Hide();
         }
     }
 }

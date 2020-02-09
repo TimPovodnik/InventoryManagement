@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gradientPanel2 = new InventoryApp.GradientPanel();
+            this.labelX = new System.Windows.Forms.Label();
             this.buttonDeleteSelectedUnit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonAddNewUnit = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             // 
             this.gradientPanel2.ColorBottom = System.Drawing.Color.DarkViolet;
             this.gradientPanel2.ColorTop = System.Drawing.Color.Navy;
+            this.gradientPanel2.Controls.Add(this.labelX);
             this.gradientPanel2.Controls.Add(this.buttonDeleteSelectedUnit);
             this.gradientPanel2.Controls.Add(this.dataGridView1);
             this.gradientPanel2.Controls.Add(this.buttonAddNewUnit);
@@ -54,6 +56,19 @@
             this.gradientPanel2.TabIndex = 0;
             this.gradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel2_Paint);
             // 
+            // labelX
+            // 
+            this.labelX.AutoSize = true;
+            this.labelX.BackColor = System.Drawing.Color.Transparent;
+            this.labelX.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX.ForeColor = System.Drawing.Color.White;
+            this.labelX.Location = new System.Drawing.Point(702, 6);
+            this.labelX.Name = "labelX";
+            this.labelX.Size = new System.Drawing.Size(96, 22);
+            this.labelX.TabIndex = 62;
+            this.labelX.Text = "<--- Nazaj";
+            this.labelX.Click += new System.EventHandler(this.labelX_Click);
+            // 
             // buttonDeleteSelectedUnit
             // 
             this.buttonDeleteSelectedUnit.BackColor = System.Drawing.Color.Transparent;
@@ -65,7 +80,7 @@
             this.buttonDeleteSelectedUnit.Name = "buttonDeleteSelectedUnit";
             this.buttonDeleteSelectedUnit.Size = new System.Drawing.Size(168, 28);
             this.buttonDeleteSelectedUnit.TabIndex = 16;
-            this.buttonDeleteSelectedUnit.Text = "Delete Selected Unit";
+            this.buttonDeleteSelectedUnit.Text = "Izbriši Izbrano Enoto";
             this.buttonDeleteSelectedUnit.UseVisualStyleBackColor = false;
             this.buttonDeleteSelectedUnit.Click += new System.EventHandler(this.buttonDeleteSelectedUnit_Click);
             // 
@@ -89,7 +104,7 @@
             this.buttonAddNewUnit.Name = "buttonAddNewUnit";
             this.buttonAddNewUnit.Size = new System.Drawing.Size(168, 28);
             this.buttonAddNewUnit.TabIndex = 14;
-            this.buttonAddNewUnit.Text = "Add New Unit";
+            this.buttonAddNewUnit.Text = "Dodaj Enoto";
             this.buttonAddNewUnit.UseVisualStyleBackColor = false;
             this.buttonAddNewUnit.Click += new System.EventHandler(this.buttonAddNewUser_Click);
             // 
@@ -108,9 +123,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(22, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 16);
+            this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Add Unit";
+            this.label1.Text = "Dodaj Enoto";
             // 
             // Unit
             // 
@@ -118,6 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gradientPanel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Unit";
             this.Text = "Add New Unit";
             this.Load += new System.EventHandler(this.Unit_Load);
@@ -136,5 +152,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonAddNewUnit;
         private System.Windows.Forms.Button buttonDeleteSelectedUnit;
+        private System.Windows.Forms.Label labelX;
     }
 }

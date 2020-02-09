@@ -105,6 +105,13 @@ namespace InventoryApp
             cmd.ExecuteNonQuery(); // vrne število spremenjenih vrstic v bazi z delete stavkom (če je nič pomeni, da ni nobenih deletanih stavkov)
             display();
         }
+
+        private void labelX_Click(object sender, EventArgs e)
+        {
+            home h = new home();
+            h.Show();
+            this.Hide();
+        }
     }
     
 }

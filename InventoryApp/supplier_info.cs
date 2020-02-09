@@ -143,5 +143,12 @@ namespace InventoryApp
                 dg();
             }
         }
+
+        private void labelX_Click(object sender, EventArgs e)
+        {
+            home h = new home();
+            h.Show();
+            this.Hide();
+        }
     }
 }

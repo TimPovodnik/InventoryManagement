@@ -83,6 +83,36 @@ namespace InventoryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avtiveDot {
+            get {
+                object obj = ResourceManager.GetObject("avtiveDot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap avtiveDot1 {
+            get {
+                object obj = ResourceManager.GetObject("avtiveDot1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circularRAM {
+            get {
+                object obj = ResourceManager.GetObject("circularRAM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_email_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-email-32", resourceCulture);
@@ -136,6 +166,36 @@ namespace InventoryApp.Properties {
         internal static System.Drawing.Bitmap login1 {
             get {
                 object obj = ResourceManager.GetObject("login1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoManagment {
+            get {
+                object obj = ResourceManager.GetObject("LogoManagment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PayPal_logo_logotype_emblem {
+            get {
+                object obj = ResourceManager.GetObject("PayPal_logo_logotype_emblem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shop_png_icon_4 {
+            get {
+                object obj = ResourceManager.GetObject("shop-png-icon-4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
