@@ -23,7 +23,7 @@ namespace InventoryApp
         {
             if (string.IsNullOrEmpty(txtFirstName.Text) || string.IsNullOrEmpty(txtLastName.Text) || string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtEmail.Text)) // preveri, če so zahtevani textboxi prazni
             {
-                MessageBox.Show("Please fill in all of required fields.");
+                MessageBox.Show("Prosim, zapolnite vsa obvezna polja.");
             }
             else
             {
@@ -47,12 +47,12 @@ namespace InventoryApp
                     txtPassword.Text = ""; txtEmail.Text = ""; txtPhone.Text = "";
                     display(); // funkcija za prikaz podatkov v DataGridWiev
 
-                    MessageBox.Show("New user inserted successfully."); // obvestilo ob primeru veljavnosti pogoja
+                    MessageBox.Show("Nov uporabik uspešno vstavljen."); // obvestilo ob primeru veljavnosti pogoja
 
                 }
                 else
                 {
-                    MessageBox.Show("This username already exists, please chose another one."); // obvestilo ob primeru neveljavnosti pogoja
+                    MessageBox.Show("To Uporabiško Ime že obstaja, prosim izberite drugega."); // obvestilo ob primeru neveljavnosti pogoja
                 }
             }
         }
@@ -100,7 +100,7 @@ namespace InventoryApp
             }
             catch 
             {
-                MessageBox.Show("You can't delete non existing user."); // Error Message, če izbrišemo NULL vrstico.
+                MessageBox.Show("Nemoreš Izbrisati neobsotječega uporabnika."); // Error Message, če izbrišemo NULL vrstico.
                 throw;
             }
             
@@ -117,6 +117,11 @@ namespace InventoryApp
             home h = new home();
             h.Show();
             this.Hide();
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

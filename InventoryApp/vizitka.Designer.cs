@@ -119,11 +119,11 @@
             // 
             this.labelVizitka.AutoSize = true;
             this.labelVizitka.BackColor = System.Drawing.Color.Transparent;
-            this.labelVizitka.Font = new System.Drawing.Font("Century Gothic", 18.25F);
+            this.labelVizitka.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVizitka.ForeColor = System.Drawing.Color.White;
             this.labelVizitka.Location = new System.Drawing.Point(331, 110);
             this.labelVizitka.Name = "labelVizitka";
-            this.labelVizitka.Size = new System.Drawing.Size(94, 31);
+            this.labelVizitka.Size = new System.Drawing.Size(89, 28);
             this.labelVizitka.TabIndex = 1;
             this.labelVizitka.Text = "Vizitka";
             // 

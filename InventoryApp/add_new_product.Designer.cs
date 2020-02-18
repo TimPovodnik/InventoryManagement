@@ -260,6 +260,7 @@
             this.txtEnterProductName.Name = "txtEnterProductName";
             this.txtEnterProductName.Size = new System.Drawing.Size(168, 20);
             this.txtEnterProductName.TabIndex = 8;
+            this.txtEnterProductName.TextChanged += new System.EventHandler(this.txtEnterProductName_TextChanged);
             // 
             // label2
             // 

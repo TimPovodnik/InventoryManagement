@@ -139,7 +139,16 @@ namespace InventoryApp
 
         private void txtPrice_Leave(object sender, EventArgs e)
         {
-            txtTotal.Text = Convert.ToString(Convert.ToInt32(txtQuantity.Text) * Convert.ToInt32(txtPrice.Text)); // skupni znesek je količina * cena
+            if (String.IsNullOrEmpty(txtTotal.Text))
+            {
+                MessageBox.Show("Textbox Cena ali textbox Količina je prazen!");
+                return; // return because we don't want to run normal code of buton click                           
+            }
+            else
+            {
+                txtTotal.Text = Convert.ToString(Convert.ToInt32(txtQuantity.Text) * Convert.ToInt32(txtPrice.Text)); // skupni znesek je količina * cena
+            }
+            
         }
 
         private void comboBoxSupplierName_SelectedIndexChanged(object sender, EventArgs e)
@@ -188,7 +197,7 @@ namespace InventoryApp
                 cmd5.ExecuteNonQuery();
                 
             }
-            MessageBox.Show("Product was purhased successfully.");
+            MessageBox.Show("Izdelek je bil nakupljen uspešno.");
         }
 
         private void labelX_Click(object sender, EventArgs e)

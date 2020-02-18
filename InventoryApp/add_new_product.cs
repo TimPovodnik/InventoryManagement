@@ -76,7 +76,7 @@ namespace InventoryApp
         {
             if (string.IsNullOrEmpty(txtEnterProductName.Text) || string.IsNullOrEmpty(comboBox1.Text))
             {
-                MessageBox.Show("Please enter Product Name and select Unit.");
+                MessageBox.Show("Prosim, da vpišete ime izdelka in izberete ustrezno enoto.");
 
             }
             else
@@ -88,7 +88,7 @@ namespace InventoryApp
 
                 txtEnterProductName.Text = "";
                 fill_dg(); //zapolni DataGridWiev z novimi podatki, ki jih vstavimo
-                MessageBox.Show("Product inserted successfully.");
+                MessageBox.Show("Izdelek je bil vstavljen uspešno.");
             }
         }
 
@@ -142,13 +142,13 @@ namespace InventoryApp
         {
             if (string.IsNullOrEmpty(txtProductName.Text) || string.IsNullOrEmpty(comboBox2.Text) || (comboBox2.Text == txtProductName.Text)  )// preveri, če so textboxi prazni // NEDELA HELP!!!
             {
-                MessageBox.Show("Please fill all of the required fields.");
+                MessageBox.Show("Prosim, zapolnite vsa obvezna polja.");
             }
             else
             {
                 int i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString()); // dobi id iz baze
 
-                MessageBox.Show("Product was successfully updated.");
+                MessageBox.Show("Izdelek je bil posodobljen uspešno.");
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "update product_name set product_name = '" + txtProductName.Text + "',units ='" + comboBox2.SelectedItem.ToString() + "'where id = " + i + "";
@@ -175,6 +175,11 @@ namespace InventoryApp
             home h = new home();
             h.Show();
             this.Hide();
+        }
+
+        private void txtEnterProductName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

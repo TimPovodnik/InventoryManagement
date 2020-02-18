@@ -149,7 +149,7 @@ namespace InventoryApp
 
             if(Convert.ToInt32(txtQuantity.Text) > stock)
             {
-                MessageBox.Show("This much stock value is not available");
+                MessageBox.Show("Izbrana količina izdelka ni na voljo!");
             }
             else 
             {
@@ -232,7 +232,7 @@ namespace InventoryApp
 
                 dt.Clear(); // začasna tabela 
                 dataGridView1.DataSource = dt;
-                MessageBox.Show("Product inserted successfully.");
+                MessageBox.Show("Izdelek je bil vstavljen uspešno.");
             }
         }
 
@@ -241,6 +241,16 @@ namespace InventoryApp
             home h = new home();
             h.Show();
             this.Hide();
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
